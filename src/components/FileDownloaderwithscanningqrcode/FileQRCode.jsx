@@ -43,23 +43,28 @@ const FileQRCode = () => {
     setLink(URL.createObjectURL(file));
   };
 
-  const qrCodeConfig = {
-    size: 300,
-    logoImage: "../../../assets/logo.png",
-    logoWidth: 100,
-    logoHeight: 100,
-    qrCodeOptions: {
-      text: link,
-      logoBackgroundColor: "#ffffff",
-      logoBackgroundTransparent: false,
-      Blob: "https://qrcode/qq",
-    },
-  };
+  // const qrCodeConfig = {
+  //   size: 300,
+  //   logoImage: "../../../assets/logo.png",
+  //   logoWidth: 100,
+  //   logoHeight: 100,
+  //   qrCodeOptions: {
+  //     text: link,
+  //     logoBackgroundColor: "#ffffff",
+  //     logoBackgroundTransparent: false,
+  //     Blob: "https://qrcode/qq",
+  //   },
+  // };
 
   return (
     <div>
       <input type="file" onChange={handleFileUpload} />
-      <QRCode {...qrCodeConfig} />
+      <QRCode
+        value={link}
+        logoImage={"../../assets/logo.png"}
+        logoWidth={80}
+        logoHeight={80}
+      />
     </div>
   );
 };
