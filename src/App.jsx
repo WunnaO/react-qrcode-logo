@@ -9,7 +9,7 @@ import CheckBoxField from "./components/CheckBoxField";
 import TextArea from "./components/TextArea";
 import WiFiQRCode from "./components/QRCodeUploadFile/WiFiQRCode";
 import FileUploadQRCode from "./components/QRCodeUploadFile/FileUploadQRCode";
-import FileQRCode from "./components/QRCodeUploadFile/FileDownloaderwithscanningqrcode/fileQRCode";
+import FileQRCode from "./components/FileDownloaderwithscanningqrcode/fileQRCode";
 
 function App() {
   const [state, setState] = useState({});
