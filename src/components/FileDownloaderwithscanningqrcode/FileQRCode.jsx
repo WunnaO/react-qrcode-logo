@@ -59,12 +59,7 @@ const FileQRCode = () => {
   return (
     <div>
       <input type="file" onChange={handleFileUpload} />
-      <QRCode
-        value={link}
-        logoImage={"../../assets/logo.png"}
-        logoWidth={80}
-        logoHeight={80}
-      />
+      <QRCode value={link} />
     </div>
   );
 };
