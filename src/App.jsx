@@ -7,8 +7,10 @@ import ImageUploadField from "./components/ImageUploadField";
 import SelectField from "./components/SelectField";
 import CheckBoxField from "./components/CheckBoxField";
 import TextArea from "./components/TextArea";
-import WiFiQRCode from "./components/QRCodeUploadFile/WiFiQRCode";
-import FileUploadQRCode from "./components/QRCodeUploadFile/FileUploadQRCode";
+import WiFiQRCode from "./components/WifiQRCode/WiFiQRCode";
+import FileUploadQRCode from "./components/FileQRCode/FileUploadQRCode";
+import FileDatabase from "./components/FileQRCode/filedatabase";
+import QRCodeWithFile from "./components/FileQRCode/1QRCodeWithFile";
 // import FileQRCode from "./components/FileDownloaderwithscanningqrcode/fileQRCode";
 
 function App() {
@@ -361,12 +363,18 @@ function App() {
       <FileUploadQRCode />
 
       <br />
+      <p>QRCode With File</p>
+
+      <QRCodeWithFile />
+
+      <br />
 
       <WiFiQRCode />
 
       <br />
 
       {/* <FileQRCode /> */}
+      <FileDatabase />
     </div>
   );
 }

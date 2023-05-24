@@ -1,6 +1,6 @@
 // import { useState } from "react";
 
-const ImageUploadField = ({ name, handleLogoUpload }) => {
+const ImageUploadField = ({ name, handleChange }) => {
   // const retrievePathFile = (files) => {
   //   const file = files[0];
   //   if (file.type !== "image/png" && file.type !== "image/jpeg") {
@@ -33,7 +33,7 @@ const ImageUploadField = ({ name, handleLogoUpload }) => {
         type="file"
         name={name}
         accept=".png, .jpg, .jpeg, .kri , .svg"
-        onChange={handleLogoUpload}
+        onChange={handleChange}
       />
     </div>
   );

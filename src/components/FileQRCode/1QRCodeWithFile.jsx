@@ -2,7 +2,7 @@ import { useState } from "react";
 // import FileUploader from "./FileUploader";
 import { QRCode } from "react-qrcode-logo";
 import logo from "../../assets/react.svg";
-import FileUploader from "./FileUploader";
+// import FileUploadQRCode from "./1FileUploader";
 
 // const QRCodeWithFile = () => {
 //   const [fileContent, setFileContent] = useState(null);
@@ -28,7 +28,7 @@ import FileUploader from "./FileUploader";
 const QRCodeWithFile = () => {
   const [file, setFile] = useState(null);
   const [fileContent, setFileContent] = useState("");
-
+  console.log(fileContent);
   console.log(file);
 
   const handleFileUpload = (event) => {
@@ -44,16 +44,18 @@ const QRCodeWithFile = () => {
 
   return (
     <div>
-      <FileUploader onFileUpload={handleFileUpload} />
+      {/* <FileUploadQRCode onFileUpload={handleFileUpload} /> */}
+
+      <br />
+
       <input type="file" onChange={handleFileUpload} />
-      {fileContent && (
-        <QRCode
-          value={fileContent}
-          logoImage={logo}
-          logoWidth={80}
-          logoHeight={80}
-        />
-      )}
+
+      <QRCode
+        value={fileContent}
+        logoImage={logo}
+        logoWidth={80}
+        logoHeight={80}
+      />
     </div>
   );
 };

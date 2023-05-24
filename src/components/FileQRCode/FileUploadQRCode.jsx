@@ -6,6 +6,7 @@ import { QRCode } from "react-qrcode-logo";
 function FileUploadQRCode() {
   const [text, setText] = useState("");
   const [logo, setLogo] = useState();
+  console.log(text);
 
   // Function to handle file upload
   const handleFileUpload = (event) => {
