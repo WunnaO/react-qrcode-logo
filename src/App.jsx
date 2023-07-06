@@ -359,20 +359,14 @@ function App() {
         Download QR Code
       </button>
       <br />
-
+      -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
       <FileUploadQRCode />
-
       <br />
       <p>QRCode With File</p>
-
       <QRCodeWithFile />
-
       <br />
-
       <WiFiQRCode />
-
       <br />
-
       {/* <FileQRCode /> */}
       <FileDatabase />
     </div>
