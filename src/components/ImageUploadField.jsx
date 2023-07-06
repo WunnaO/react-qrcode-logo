@@ -1,8 +1,10 @@
 import { useState } from "react";
 
-const ImageUploadField = ({ name, handleChange }) => {
+// eslint-disable-next-line react/prop-types
+function ImageUploadField({ name, handleChange }) {
   const [errorFile, setErrorFile] = useState(false);
 
+  let target;
   const retrievePathFile = (files) => {
     const file = files[0];
     if (file.type !== "image/png" && file.type !== "image/jpeg") {
@@ -10,7 +12,7 @@ const ImageUploadField = ({ name, handleChange }) => {
       console.error("Only png and jpg/jpeg allowed.");
     } else {
       setErrorFile(false);
-      const target = {};
+      target = {};
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onloadend = () => {
@@ -39,13 +41,19 @@ const ImageUploadField = ({ name, handleChange }) => {
         </p>
       )}
       {/* <input
-        type="file"
-        name={name}
-        accept=".png, .jpg, .jpeg, .kri , .svg"
-        onChange={handleChange}
-      /> */}
+              type="file"
+              name={name}
+              accept=".png, .jpg, .jpeg, .kri , .svg"
+              onChange={handleChange}
+            /> */}
+      <button
+        className="border divide-solid w-[60%] mt-4 bg-gray-300 text-center h-[40px]"
+        // onChange={removeLogoHandler}
+      >
+        Remove Logo
+      </button>
     </div>
   );
-};
+}
 
 export default ImageUploadField;
